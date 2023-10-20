@@ -10,7 +10,7 @@ See a full list of VMs available [here](https://github.com/orgs/cirruslabs/packa
 
 ## Building Finesse Image
  
-Update the variables.pkrvars.hcl to use sonoma or whatever OS is required
+Update the variables.pkrvars.hcl to use sonoma or whatever OS is required. `brew install packer` for the tool.
 ```bash
 packer build -var-file="variables.pkrvars.hcl" templates/finesse.pkr.hcl
 ```
@@ -19,8 +19,8 @@ This will make an image called
 ```bash
 # Due to MFA you need to make an access token to use as  a password, username is the usual albert.einstein without @LIGO.ORG
 tart login containers.ligo.org
-# Update the version tag when pushing a new one
-tart push sonoma-finesse containers.ligo.org/finesse/finesse3/sonoma-finesse:v1
+# Update the version tag when pushing a new one and add to the change log
+tart push sonoma-finesse containers.ligo.org/finesse/finesse3/sonoma-finesse:v???
 ```
 
 ## CHANGELOG

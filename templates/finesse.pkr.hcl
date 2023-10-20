@@ -65,6 +65,7 @@ build {
       "brew update",
       "brew install wget cmake gcc git-lfs jq gh gitlab-runner mambaforge",
       "git lfs install",
+      "mamba init zsh",
     ]
   }
   provisioner "shell" {
@@ -92,11 +93,6 @@ build {
   provisioner "shell" {
     inline = [
       "sudo safaridriver --enable",
-    ]
-  }
-  provisioner "shell" {
-    inline = [
-      "conda init zsh",
     ]
   }
 }
