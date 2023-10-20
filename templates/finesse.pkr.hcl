@@ -94,4 +94,9 @@ build {
       "sudo safaridriver --enable",
     ]
   }
+  provisioner "shell" {
+    inline = [
+      "conda init zsh",
+    ]
+  }
 }
